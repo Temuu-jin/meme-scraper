@@ -45,7 +45,7 @@ fetch(websiteUrl)
       const src = imgSrcList[index];
 
       //every number under 10 gets a 0 before its index+1. if 10 its just index+1
-      const fileName = `img${index + 1 < 10 ? `0${index + 1}` : index + 1}.jpg`;
+      const fileName = `${index + 1 < 10 ? `0${index + 1}` : index + 1}.jpg`;
 
       //Declare constants for downloading so the code looks neat. used for fs.writeFileSync
       const filePath = `./memes/${fileName}`; // where to save
