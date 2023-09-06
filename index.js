@@ -47,13 +47,13 @@ fetch(websiteUrl)
       fetch(imageUrl.href)
         .then((response) => {
           if (response.ok) {
-            return response.buffer(); // return the image data as a .buffer
+            return response.arrayBuffer(); // return the image data as ArrayBuffer
           } else {
             throw new Error(`Failed to download image: ${response.statusText}`);
           }
         })
         .then((imageBuffer) => {
-          fs.writeFileSync(filePath, imageBuffer); // Save images to filePath
+          fs.writeFileSync(filePath, Buffer.from(imageBuffer)); // convert the ArrayBuffer to Buffer
           console.log(`Downloaded and saved ${fileName}`);
         })
         .catch((error) => {
