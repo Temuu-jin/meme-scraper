@@ -5,6 +5,16 @@ import { parse } from 'node-html-parser';
 // Declare websiteUrl variable
 const websiteUrl = 'https://memegen-link-examples-upleveled.netlify.app/'; // Replace with the actual website URL
 
+const directoryPath = 'memes';
+// Check if the directory already exists
+if (!fs.existsSync(directoryPath)) {
+  // If it doesn't exist, create the directory
+  fs.mkdirSync(directoryPath);
+  console.log(`Directory '${directoryPath}' created successfully.`);
+} else {
+  console.log(`Directory '${directoryPath}' already exists.`);
+}
+
 fetch(websiteUrl)
   .then((response) => {
     if (response.ok) {
