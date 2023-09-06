@@ -64,3 +64,5 @@ fetch(websiteUrl)
   .catch((error) => {
     console.error('Error:', error.message);
   });
+
+//TODO create script that mkdir memes before running the download
