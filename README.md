@@ -27,3 +27,5 @@ for limiting to 10 i had to change from forEach() to a for(limit){fetch().then()
 
 JavaScript provides error.message to handle errors. when error is thrown a error object is generated with info about error
 response.statusText is for error handling from the node-fetch library
+
+Finished ToDo's
